@@ -3,7 +3,7 @@ import Quill from 'quill';
 import 'quill/dist/quill.snow.css';
 import { Box, Button } from '@mui/material';
 import styled from '@emotion/styled';
-import {html2pdf} from 'html2pdf.js';
+import html2pdf from 'html2pdf.js';
 import { io } from 'socket.io-client';
 import { useParams } from 'react-router-dom';
 

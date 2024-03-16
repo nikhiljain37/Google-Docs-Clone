@@ -1,14 +1,17 @@
 import {Server} from 'socket.io';
-
 import Connection from './database/db.js';
-
 import { getDocument, updateDocument } from './controller/document.controller.js'
+import dotenv from "dotenv"
 
-// const PORT = process.env.PORT || 9000;
+dotenv.config({
+    path: './.env'
+})
+
+const PORT = process.env.PORT || 9000;
+
 
 Connection();
 
-const PORT = 9000;
 const io = new Server(PORT,{
     cors: {
         origin: 'http://localhost:3000',
