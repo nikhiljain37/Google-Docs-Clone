@@ -14,7 +14,7 @@ Connection();
 
 const io = new Server(PORT,{
     cors: {
-        origin: `http://localhost:${PORT}`,
+        origin: `https://docsclone-one.vercel.app/`,
         methods: ['GET','POST']
     }
 });

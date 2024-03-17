@@ -32,7 +32,6 @@ const toolbarOptions = [
     ['clean']
 ];
 
-const PORT = process.env.PORT || 9000;
 
 const Editor = () => {
     const [socket, setSocket] = useState(null);
@@ -53,7 +52,7 @@ const Editor = () => {
     };
 
     useEffect(() => {
-        const socketServer = io(`http://localhost:${PORT}`);
+        const socketServer = io('https://google-docs-clone-dn7g.onrender.com');
         setSocket(socketServer);
 
         return () => {
