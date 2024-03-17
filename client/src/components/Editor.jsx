@@ -32,6 +32,8 @@ const toolbarOptions = [
     ['clean']
 ];
 
+const PORT = process.env.PORT || 9000;
+
 const Editor = () => {
     const [socket, setSocket] = useState(null);
     const [quill, setQuill] = useState(null);
@@ -51,7 +53,7 @@ const Editor = () => {
     };
 
     useEffect(() => {
-        const socketServer = io('http://localhost:9000');
+        const socketServer = io(`http://localhost:${PORT}`);
         setSocket(socketServer);
 
         return () => {
